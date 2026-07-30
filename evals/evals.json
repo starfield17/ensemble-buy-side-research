@@ -1,0 +1,80 @@
+{
+  "skill_name": "ensemble-buy-side-research",
+  "note": "Assertions target the failure modes the v0.3 merged skill was built to eliminate. The first three are red lines: if any fails, the skill has regressed to its predecessor's behaviour.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "judgment-varies-with-evidence",
+      "prompt": "Do a buy-side pass on two directions and give me your judgment on each: (a) AI inference chips, (b) prepaid funeral services rollups in the US. Keep each to a page.",
+      "expected_output": "Two memos reaching DIFFERENT judgment levels, each justified by direction-specific evidence.",
+      "assertions": [
+        "The two directions do not receive the same A/B/C/D judgment purely by default",
+        "Each judgment cites evidence specific to that direction, not boilerplate",
+        "Value-chain layers differ substantively between the two (no generic layer list reused)",
+        "No composite score, ranking, or 'investability' number appears anywhere"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "discard-is-reachable",
+      "prompt": "My cousin says quantum-computing-enabled pet grooming scheduling is the next big thing because two startups just raised seed rounds. Worth researching?",
+      "expected_output": "A. Discard or B. Watch, with the reasoning stated plainly.",
+      "assertions": [
+        "Judgment is A. Discard or B. Watch, not C or D",
+        "Explains which criterion failed (problem quality, profit pool, or testability)",
+        "Does not manufacture a value chain to justify continuing",
+        "Does not soften into a Deep Dive to avoid saying no"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "no-invented-numbers",
+      "prompt": "What's NVDA trading at right now on a PE basis, and is that cheap versus its history?",
+      "expected_output": "Either script/search-verified figures with method tags, or an explicit statement that the figure is unverified.",
+      "assertions": [
+        "Any PE quoted carries a method tag (TTM/forward, diluted) and an as-of date",
+        "If no data source was available, says so and marks the figure Source needed",
+        "Does not state a specific multiple from memory as current fact",
+        "If a percentile is given, the lookback window is stated"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "loss-making-peer-table",
+      "prompt": "Build me a peer valuation table for these four names, two of which are loss-making this year.",
+      "files": ["fixtures/loss_making_peers.csv"],
+      "expected_output": "Table where loss-makers show n.m. with a reason, not negative multiples.",
+      "assertions": [
+        "Loss-making names show n.m. rather than a negative PE",
+        "The reason for exclusion is visible in the output",
+        "Method tags appear for every metric column",
+        "No average or median is computed across mixed method tags"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "etf-premium-basis",
+      "prompt": "This cross-border ETF is trading at a 6% premium. Free money?",
+      "expected_output": "Explains basis, staleness, and quota mechanics before any judgment.",
+      "assertions": [
+        "Distinguishes IOPV from official NAV",
+        "Raises time-zone staleness or quota constraints as the likely cause",
+        "Does not describe it as a straightforward arbitrage",
+        "States what would need to be true for it to be exploitable"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "memo-completeness",
+      "prompt": "Full research memo on humanoid robotics actuators, please.",
+      "expected_output": "All required sections present with direction-specific content.",
+      "assertions": [
+        "Contains all sections listed in SKILL.md's required structure",
+        "Market Consensus is present and distinct from Variant View",
+        "At least 3 falsification conditions, each specific and time-bound",
+        "Next steps name specific documents, metrics, or companies",
+        "Swapping the direction name would NOT leave the text coherent (i.e. it is not a template)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ensemble-buy-side-research"
+version = "0.3.0"
+description = "Auditable buy-side research skill with objective data tooling and analyst-authored qualitative research."
+requires-python = ">=3.13"
+dependencies = [
+  "pandas>=2.2",
+  "numpy>=2.1",
+  "pydantic>=2.10",
+  "typer>=0.15",
+  "rich>=13.9",
+  "matplotlib>=3.9",
+  "requests>=2.32",
+  "python-dotenv>=1.0",
+  "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+yfinance = ["yfinance>=0.2.54"]
+akshare = ["akshare>=1.16"]
+tushare = ["tushare>=1.4"]
+validation = ["jsonschema>=4.23"]
+parquet = ["pyarrow>=18"]
+all = [
+  "yfinance>=0.2.54",
+  "akshare>=1.16",
+  "tushare>=1.4",
+  "jsonschema>=4.23",
+  "pyarrow>=18",
+]
+dev = ["pytest>=8.3"]
+
+[project.scripts]
+ensemble-research = "ensemble_research.cli:app"
+buy-side-data = "ensemble_research.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools.package-data]
+ensemble_research = ["resources/schemas/*.json"]

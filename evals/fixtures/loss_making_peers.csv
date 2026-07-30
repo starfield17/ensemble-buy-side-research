@@ -1,0 +1,5 @@
+ticker,name,currency,as_of,window,source,price,shares_diluted,eps_ttm_diluted,book_value_per_share,revenue_ttm,ebitda_ttm,total_debt,cash_and_equivalents,minority_interest,free_cash_flow_ttm
+PROF,Profitable Components,USD,2026-06-30,TTM 2025Q3-2026Q2,illustrative fixture,142.70,2400000000,4.54,31.20,42000000000,15000000000,8000000000,5000000000,400000000,9000000000
+STDY,Steady Systems,USD,2026-06-30,TTM 2025Q3-2026Q2,illustrative fixture,61.40,900000000,2.10,18.60,9000000000,1600000000,3000000000,1200000000,0,900000000
+LOSS,Growth Integrators,USD,2026-06-30,TTM 2025Q3-2026Q2,illustrative fixture,28.30,600000000,-0.41,6.10,3000000000,-100000000,2200000000,700000000,50000000,-260000000
+DEEP,Turnaround Industrials,USD,2026-06-30,TTM 2025Q3-2026Q2,illustrative fixture,9.80,1100000000,-1.85,-2.40,5400000000,120000000,6100000000,300000000,0,-410000000

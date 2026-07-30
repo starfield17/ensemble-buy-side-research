@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.3.0",
+  "kind": "watchlist",
+  "direction": "[direction]",
+  "items": [
+    {
+      "thesis_driver": "[which part of the thesis this tests]",
+      "variable": "[observable metric]",
+      "why_it_matters": "[how a move in this changes the thesis, 20+ chars]",
+      "source": "[filing / call / industry data / exchange]",
+      "frequency": "Quarterly",
+      "bullish_threshold": "[specific enough for someone else to check]",
+      "bearish_threshold": "[specific enough for someone else to check]",
+      "current_reading": "Source needed",
+      "next_check": "[date or event]",
+      "confidence": "low"
+    }
+  ],
+  "status_rules": {
+    "upgrade_if": "[condition]",
+    "downgrade_if": "[condition]",
+    "abandon_if": "[condition]"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "events": [
+    {
+      "id": "capacity_expansion",
+      "date": "2025-06-10",
+      "tickers": [
+        "AAA",
+        "BBB"
+      ]
+    },
+    {
+      "id": "export_control",
+      "date": "2025-10-11",
+      "tickers": [
+        "AAA",
+        "CCC"
+      ]
+    },
+    {
+      "id": "guidance_cut",
+      "date": "2026-02-18",
+      "tickers": [
+        "BBB"
+      ]
+    }
+  ]
+}

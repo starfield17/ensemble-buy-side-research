@@ -1,0 +1,4 @@
+ticker,name,currency,as_of,window,source,eps_ttm_diluted,eps_last_fy,book_value_per_share,revenue_ttm,ebitda_ttm,total_debt,cash_and_equivalents,minority_interest,free_cash_flow_ttm,shares_diluted
+AAA,Alpha Components,USD,2026-03-31,TTM ending 2026-03-31,fixture,4.448,3.04,38.92,58380000000.00001,20850000000.0,8000000000.0,5000000000.0,400000000.0,12510000000.0,2400000000.0
+BBB,Beta Systems,USD,2026-03-31,TTM ending 2026-03-31,fixture,1.529,1.045,19.46,12510000000.000002,2224000000.0,8000000000.0,5000000000.0,400000000.0,1334400000.0,2400000000.0
+CCC,Gamma Integrators,USD,2026-03-31,TTM ending 2026-03-31,fixture,-0.556,-0.38,8.34,4170000000.0000005,-139000000.0,8000000000.0,5000000000.0,400000000.0,-83400000.0,2400000000.0

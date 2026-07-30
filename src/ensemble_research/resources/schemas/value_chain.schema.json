@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Value chain map",
+  "description": "Authored by the analyst. Scripts validate and render it; they never generate it.",
+  "type": "object",
+  "required": ["direction", "layers"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "kind": {"const": "value_chain"},
+    "direction": {"type": "string", "minLength": 10},
+    "as_of": {"type": "string"},
+    "layers": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["name", "problem_solved", "players", "profit_pool_quality", "judgment"],
+        "properties": {
+          "name": {"type": "string"},
+          "problem_solved": {"type": "string", "minLength": 20,
+            "description": "What economic problem THIS layer solves. Not a restatement of the direction."},
+          "players": {
+            "type": "object",
+            "properties": {
+              "global": {"type": "array", "items": {"type": "string"}},
+              "regional": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "bottleneck": {"enum": ["low", "medium", "high", "unknown"]},
+          "profit_pool_quality": {"enum": ["low", "medium", "high", "unknown"]},
+          "competition": {"enum": ["low", "medium", "high", "unknown"]},
+          "commoditization_risk": {"enum": ["low", "medium", "high", "unknown"]},
+          "judgment": {"type": "string", "minLength": 20},
+          "evidence": {"type": "array", "items": {"type": "string"},
+            "description": "Source ids or citations backing the layer's economics."},
+          "evidence_needed": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "source_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}

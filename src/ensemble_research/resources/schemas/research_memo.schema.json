@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research memo",
+  "description": "Machine-checkable form of the memo. Every narrative field is written by the analyst.",
+  "type": "object",
+  "required": ["direction", "problem_solved", "value_chain", "market_consensus", "variant_view",
+               "key_variables", "falsification_conditions", "initial_judgment", "next_research_steps"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "kind": {"const": "research_memo"},
+    "direction": {"type": "string", "minLength": 10},
+    "trigger": {
+      "type": "object",
+      "properties": {
+        "description": {"type": "string"},
+        "type": {"enum": ["Demand", "Supply", "Policy", "Technology", "Financial", "Narrative",
+                          "Price Action", "Competitive", "Customer Adoption", "Capacity", "Unknown"]},
+        "why_now": {"type": "string"},
+        "real_variable_changed": {"enum": ["yes", "no", "unclear"]}
+      }
+    },
+    "problem_solved": {"type": "string", "minLength": 60},
+    "facts": {"type": "array", "items": {
+      "type": "object",
+      "required": ["fact", "source_id"],
+      "properties": {
+        "fact": {"type": "string"},
+        "source_id": {"type": "string"},
+        "label": {"enum": ["Fact", "Interpretation", "Hypothesis", "Unknown"]}
+      }
+    }},
+    "value_chain": {"type": "object"},
+    "profit_pool": {"type": "string", "minLength": 40},
+    "quality_lens": {"type": "object"},
+    "commoditization_risk": {"type": "array", "items": {"type": "object"}},
+    "market_consensus": {"type": "string", "minLength": 40},
+    "variant_view": {"type": "string", "minLength": 40},
+    "key_variables": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "watchlist": {"type": "object"},
+    "initial_judgment": {"enum": ["A. Discard", "B. Watch", "C. Deep Dive",
+                                  "D. Potential Investment Thesis"]},
+    "judgment_rationale": {"type": "string", "minLength": 40},
+    "falsification_conditions": {"type": "array", "minItems": 3,
+                                 "items": {"type": "string", "minLength": 25}},
+    "next_research_steps": {"type": "array", "minItems": 3, "maxItems": 7,
+                            "items": {"type": "string", "minLength": 15}}
+  }
+}

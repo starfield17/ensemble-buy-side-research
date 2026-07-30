@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.3.0",
+  "kind": "value_chain",
+  "direction": "[One sentence defining the research object, at least 10 characters]",
+  "as_of": "[YYYY-MM-DD]",
+  "layers": [
+    {
+      "name": "[layer name derived from THIS industry, not a generic list]",
+      "problem_solved": "[what economic problem this specific layer solves, 20+ chars]",
+      "players": {"global": ["[cited company]"], "regional": ["[cited company]"]},
+      "bottleneck": "high",
+      "profit_pool_quality": "high",
+      "competition": "medium",
+      "commoditization_risk": "low",
+      "judgment": "[who captures economics here, and on what evidence]",
+      "evidence": ["[source id backing the economics claim]"],
+      "evidence_needed": ["[what you still cannot verify]"]
+    }
+  ],
+  "source_ids": []
+}

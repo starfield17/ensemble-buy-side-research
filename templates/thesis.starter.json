@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.3.0",
+  "kind": "thesis",
+  "direction": "[direction]",
+  "statement": "[the thesis in one paragraph, 40+ chars]",
+  "consensus": "[what the market likely believes, 30+ chars]",
+  "consensus_verified": false,
+  "variant_view": "[where and why you differ, 40+ chars]",
+  "layer": "[value-chain layer the view attaches to]",
+  "time_horizon": "[e.g. 6-24 months]",
+  "variables": ["[observable 1]", "[observable 2]"],
+  "falsification": [
+    "[condition 1 — specific and time-bound, 25+ chars]",
+    "[condition 2 — specific and time-bound, 25+ chars]"
+  ],
+  "quality_lens": {
+    "circle_of_competence": "edge",
+    "moat_source": "[evidence-backed]",
+    "moat_trend": "unknown",
+    "pricing_power": "[evidence]",
+    "capital_intensity": "[evidence]",
+    "five_year_closure_test": "[answer]",
+    "ruin_risk": "[leverage, liquidity, concentration, governance]",
+    "implication": "neutral",
+    "evidence_needed": []
+  },
+  "valuation_reference": {
+    "note": "Copy metric objects (with method tags) from valuation.json and percentile.json."
+  },
+  "judgment": "B. Watch",
+  "judgment_rationale": "[2-4 sentences, 40+ chars]",
+  "source_ids": []
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source pack",
+  "type": "object",
+  "required": ["sources"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "kind": {"const": "source_pack"},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "source_type", "date"],
+        "properties": {
+          "id": {"type": "string"},
+          "title": {"type": "string"},
+          "url": {"type": "string"},
+          "publisher": {"type": "string"},
+          "date": {"type": "string"},
+          "source_type": {"enum": ["primary_filing", "earnings_call", "regulator", "exchange",
+                                   "company_ir", "media", "industry_body", "sell_side",
+                                   "expert_interview", "social", "other"]},
+          "relevant_claims": {"type": "array", "items": {"type": "string"}},
+          "linked_variables": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
