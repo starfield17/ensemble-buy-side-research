@@ -1,6 +1,6 @@
 ---
 name: ensemble-buy-side-research
-description: Harness-neutral buy-side research framework plus deterministic data toolkit. Use it to turn a theme, event, company, industry chain, peer set, or ETF into an auditable research pack: fetch market/fundamental/filing/news data, compute objective metrics (PE, PB, PS, PEG variants, EV/EBITDA, margins, returns, volatility, drawdown, historical valuation percentiles, ETF premium/discount, benchmark-adjusted event returns), generate tables/charts, validate artifacts, and then produce an analyst-authored value-chain, consensus, variant-view, watchlist, and falsification-based memo. Never use the scripts to score, rank, grade, or automatically recommend securities.
+description: "Harness-neutral buy-side research framework plus deterministic data toolkit. Use it to turn a theme, event, company, industry chain, peer set, or ETF into an auditable research pack: fetch market/fundamental/filing/news data, compute objective metrics (PE, PB, PS, PEG variants, EV/EBITDA, margins, returns, volatility, drawdown, historical valuation percentiles, ETF premium/discount, benchmark-adjusted event returns), generate tables/charts, validate artifacts, and then produce an analyst-authored value-chain, consensus, variant-view, watchlist, and falsification-based memo. Never use the scripts to score, rank, grade, or automatically recommend securities."
 ---
 
 # Ensemble Buy-side Research
